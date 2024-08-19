@@ -4,14 +4,14 @@ console.log("Pick a number:");
 let n = readlineSync.question("> ");
 
 let sum = 0;
-let result = "";
+let list = "";
 
 for (let i = 1; i <= n; i++) {
-    result += i;
+    list += i;
     if (i < n) {
-        result += " + ";
+        list += " + ";
     }
     sum = sum + i;
 }
 
-console.log (result + " = " + sum);
+console.log (list + " = " + sum);
