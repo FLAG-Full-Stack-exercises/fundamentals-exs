@@ -73,7 +73,18 @@ if (type == '1') {
             } if (guest == '1') {
                 total = value3;
             } if (guest == '2') {
-                total = value3 + 10 * days;
+                console.log("Would you like to add breakfast for the guest?");
+                console.log("Answer Yes (y) or No (n):");
+                let bfast2 = readlineSync.question("> ");
+                while (bfast2 !== 'y' && bfast2 !== 'n') {
+                    console.log(bfast2 + " is not valid, answer Yes (y) or No (n):");
+                    bfast2 = readlineSync.question("> ");
+                }
+                    if (bfast2 == "n"){
+                        total = value3 + 10 * days;
+                }   if (bfast2 == "y"){
+                        total = value3 + 10 * days + 10;
+                }
             }
 
 console.log("");
